@@ -1,0 +1,30 @@
+Service Telemetry Framework 1.4 operator
+
+
+ElasticSearch
+Prometheus
+Alertmanager
+Grafana
+
+
+
+
+SUF Status
+SUF Configuration 
+	inputs.conf - host / server.conf - serverName / deploymentclient.conf - clientname (GUID if no clientname is specified). Note: host, serverName, clientname and device_hostname (in beacon file) should be FQDN, lower case and exactly match!
+associated beacon file information
+Active Directory information
+nslookup results
+associated splunkd.log information
+a sampling of events from the device
+a summary of events grouped by data indexes
+sourcetype
+event count
+event data size
+metrics index check (only if it has been configured on the device)
+
+
+
+
+
+

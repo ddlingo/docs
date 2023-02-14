@@ -1,0 +1,67 @@
+Been troubleshooting another login issue from our man Jeff Reichenberg.  Last time he had errors:
+"Login failed: You are not authorized for any projects or domains".
+And Mike seemed to imply it was sort of mapping problem that he ended up resolving. 
+This time he is just not allowed to login because it just loops back to the login screen after he tries to use his creds.
+
+ssh heat-admin@vfd01-novacompute-0.ctlplane
+ssh heat-admin@vfd01-controller-0.ctlplane
+ssh heat-admin@ddc01-controller-0.ctlplane
+
+(ddc01) [stack@nsrcc-ospp-dir ~]$ cat ddc01rc
+# Clear any old environment that may conflict.
+for key in $( set | awk '{FS="="}  /^OS_/ {print $1}' ); do unset $key ; done
+export NOVA_VERSION=1.1
+export COMPUTE_API_VERSION=1.1
+export OS_USERNAME=admin
+export OS_PROJECT_NAME=admin
+export OS_USER_DOMAIN_NAME=Default
+export OS_PROJECT_DOMAIN_NAME=Default
+export OS_NO_CACHE=True
+export OS_CLOUDNAME=ddc01
+export no_proxy=,10.224.2.66,iaas-west-prd.ssc.lmco.com
+export PYTHONWARNINGS='ignore:Certificate has no, ignore:A true SSLContext object is not available'
+export OS_AUTH_TYPE=password
+export OS_PASSWORD=MFeNry3Qt9KXy08cgm7nl9fOu
+export OS_AUTH_URL=https://iaas-west-prd.ssc.lmco.com:13000
+export OS_IDENTITY_API_VERSION=3
+export OS_COMPUTE_API_VERSION=2.latest
+export OS_IMAGE_API_VERSION=2
+export OS_VOLUME_API_VERSION=3
+export OS_REGION_NAME=regionOne
+
+# Add OS_CLOUDNAME to PS1
+if [ -z "${CLOUDPROMPT_ENABLED:-}" ]; then
+    export PS1=${PS1:-""}
+    export PS1=\${OS_CLOUDNAME:+"(\$OS_CLOUDNAME)"}\ $PS1
+    export CLOUDPROMPT_ENABLED=1
+
+
+
+
+New Architecture
+Requirements
+
+All RHVH nodes should have a minimum 3 drives, preferably SSDs. 
+
+10gb link should be up and lag should not be higher than 20ms between hosts
+
+valid RH subscription
+
+3 FQDN and IP for the RHVH
+
+1FQDN and IP for the engine (RHV manager)
+
+Simplified Deployment guide:
+
+1) Install RHVH image on to the 3 hosts
+
+2) configure proxy, network, subscription 
+
+3) use ssacli to build the raid5/raid6 array for the SSD
+
+4) deploy gluster using glusterd deployment 
+
+5) deploy hosted engine 
+
+6) verify deployment,set up backup, ansible role, etc. 
+

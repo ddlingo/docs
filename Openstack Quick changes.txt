@@ -1,0 +1,20 @@
+openstack quota set --QUOTA_NAME QUOTA_VALUE PROJECT_NAME
+openstack quota show PROJECT_NAME
+openstack server list --all-projects --project $projectname
+openstack server list --all-projects --project mbeadevbDDC
+
+openstack quota set --gigabytes 4000 d8a06b69697d41e293d190efa6a97339
+   15  openstack quota show --fit d8a06b69697d41e293d190efa6a97339
+   16  openstack project list --fit | grep -i SGS1IOCNOC
+   17  openstack quota show --fit 26307038517f44b2af79dbb73e5156e0
+   18  openstack quota set --instances 20 --cores 40 --ram 250 --gigabytes 2048 --volumes 20 26307038517f44b2af79dbb73e5156e0
+
+openstack server list --column ID --all-projects --project 8c9b5e5cacd0499d93efbbcdb041e4be
+
+
+cores                 | 20  --> 116
+gigabytes             | 1000 --> 50,000
+ram                   | 32768 --> 832
+volumes               | 10  --> 50
+instances             | 10  --> 20
+

@@ -1,0 +1,346 @@
+Incident INC4243849
+vfdc-156-82-64-83
+a96b5faf-61e8-47d4-9044-13156e03119a 
+156.82.64.83 
+VFDCSpaceTWC
+Security Group name='cassandra'
+key-name VFDCSpaceTWC
+
+
+
+
+158.188.81.92 
+Project: IndexerDev
+
+
+
+
+lingotest01	iniStar RHEL 8.6 LTS	DDC
+158.188.81.54
+2ff231a2-2409-495b-b12b-5de4fae03fb4
+
+
+INC4220321
+volume bafb5e7f-466f-4a91-a3b5-2367fd4d5419 on /dev/vda
+instance 4246b0e4-7e6b-47ca-9022-924a0e7a6105 
+projectID 2f775fd03cf54f32946030cf6731c77b 
+c61d74f6-f67f-4650-abed-6068f903bffe | backup-vol-bafb5e7f-466f-4a91-a3b5-2367fd4d5419 
+
+vol-clone-inc422032 on /dev/vdb
+Name
+vol-clone-inc422032
+ID 9f7a6757-49df-4504-b0ca-f4875cec3660
+Description inc4220321 DELETE ME
+Project ID 5db55111cb3740a4a087f78138a3afd2
+ssh -i joel-east-key cloud-user@156.82.64.83
+
+
+
+Security updates
+ddc-158-188-81-195.ssc.lmco.com, ddc-158-188-82-43.ssc.lmco.com
+158.188.81.195 - 4246b0e4-7e6b-47ca-9022-924a0e7a6105 - EASYGitRunner-1
+158.188.82.43  - 6044b958-7b9d-475a-b46b-a39542491731 - EASYGitRunner-2
+
+
+openstack server remove volume 4246b0e4-7e6b-47ca-9022-924a0e7a6105 bafb5e7f-466f-4a91-a3b5-2367fd4d5419
+openstack server add volume 4246b0e4-7e6b-47ca-9022-924a0e7a6105 bafb5e7f-466f-4a91-a3b5-2367fd4d5419 --device /dev/vda
+
+openstack volume create --source bafb5e7f-466f-4a91-a3b5-2367fd4d5419 --description "inc4220321 DELETE ME" --size 200gb vol-clone-inc4220321
+
+New cloned volumne 9f7a6757-49df-4504-b0ca-f4875cec3660 
+name vol-clone-inc422032                 
+
+
+
+dl-EIT, I2D2 FORCE Legacy Virtualization
+PTSK0521592
+INC4160776 - instance resize - Danger error in Horizon but works CLI
+
+
+
+
+SCTASK2236830  projectID a98c31115d5e49f98eb5d5c4e289ee81
+99904d81-bd35-44f0-92c9-e1308ed99b6f
+
+INC4108458
+INC4102290
+------
+
+SCTASK2035130   done
+View Task in ServiceNow: SCTASK2111123
+https://servicecentral.external.lmco.com/nav_to.do?uri=sc_task.do?sys_id=e1b558b71b0295505aab400fe54bcb45
+
+
+
+SCTASK2084810   Quota increase to 18TB for SpaceTeamworkCloud
+09/14/2022
+
+
+https://jira-agile.us.lmco.com/projects/CLM/issues/CLM-30256?filter=allopenissues
+Backup Ceph Task
+
+--------------------------------------------------------------
+AD groups IODC keystone saml sso issue 
+
+so keystone has to be in debug mode first off
+2:10
+that makes it log the OIDC response in the logs
+2:10
+the OIDC response contains a list of groups that the user is a memeber of
+2:11
+so you just grep on the user id from the logs and it shows the groups and the resulting mapping
+2:11
+you can check all three controllers at the same time with an ansible ad-hoc
+:white_check_mark:
+1
+
+2:11
+I usually do that and dump it in to a text file in /tmp to dig through it
+2:12
+all of the osp groups should show up as something like us\\ssc.osp.ddc.projectname
+2:12
+and in the resulting mapping you should see something, if it's blank it's not mapping anything.
+2:13
+here's an example, from the account Hadrian mentioned, where it didn't map anything.
+DEBUG keystone.federation.utils [req-72784a18-2b22-4914-9f82-4d1b6eb83f4d - - - - -] mapped_properties: {'user': {'name': 'e434106', 'type': 'ephemeral'}, 'group_ids': [], 'group_names': [], 'projects': []}
+New
+2:15
+and then here is mine where it mapped a project for comparison.
+mapped_properties: {'user': {'name': 'n28021', 'type': 'ephemeral'}, 'group_ids': [], 'group_names': [{'name': 'ssc.osp.ddc.RHinfrateam001', 'domain': {'name': 'lmco'}}], 'projects': []}
+
+Openstack Access Group - NTPS Software, and ssc.osp.ddc.NTPSSoftware
+
+https://myaccess.global.lmco.com/identityiq/home.jsf > Create & Manage AD Groups > Find groups, then search for either ssc.osp.ddc.projectname or ssc.osp.vfdc.projectname . click on the project and add use
+
+https://claimstest.collabtest.lmco.com/apiclient.htm
+4:06
+scopes needs to be openid groups
+4:06
+environment needs to be prod
+4:06
+select Login
+
+----------------------------------
+
+they had duplicate entries, with two different volume groups defined.  So i attached a new disk, gave it the volume gruop and the logical volumes it was looking for.  it was happy to boot at that point
+11:09
+the problem is you have to get to the fstab to figure out whats wrong and thats where you might need backend access
+white_check_mark
+eyes
+raised_hands::skin-tone-4
+
+
+
+
+
+11:10
+but to make sure it's the fstab issue, if you reboot the instance, watch the console, it'll spend some time waiting for one or more volumes to mount
+
+
+-----------------------------
+ssh cloud-user@158.188.82.153
+provider-1125 158.188.82.153
+provider-1126 158.188.38.189
+stack_heat_admin key pair
+openstack project list |grep 544e0b734ecf4935b7169d23011604a1
+Project ID: 544e0b734ecf4935b7169d23011604a1
+Project Name: RHinfrateam001  
+
+openstack server create --flavor 300 --image afa49adf-2831-4a00-9c57-afe1624d5557 --key-name myKey --security-group 29abef85-b89f-43a0-babf-6a5bb5cc7bed myNewServer
+
+
+openstack server create --flavor 300 \
+                        --image afa49adf-2831-4a00-9c57-afe1624d5557 \
+                        --key-name myKey \
+                        --security-group 29abef85-b89f-43a0-babf-6a5bb5cc7bed \
+                        myNewInstance
+
+openstack server create --flavor efe66586-00fc-46ce-915f-09393e4aab57 \
+                        --image c5f0b550-4813-4c47-8d2d-171808aac1a2 \
+                        --key-name stack \
+						--network 9c3c95ed-7d0a-4508-8d08-d5676a4d758a \
+                        --security-group default \
+                        kvm-ddc-01
+						
+						
+
+
+544e0b734ecf4935b7169d23011604a1 | RHinfrateam001
+kvm-ddc-01
+networks - 9c3c95ed-7d0a-4508-8d08-d5676a4d758a e8b92286-f86e-4c7f-8b74-2f30ca297ff8
+SG - default 
+
+
+
+ansible -b -i ~/inventory.sh -m ping Controller 
+
+
+
+DDC, project 544e0b734ecf4935b7169d23011604a1
+158.188.82.140
+158.188.81.138
+158.188.81.178
+
+
+openstack --os-compute-api-version 2.54 server rebuild --image "IMAGE_NAME" --key-name key1 instance1
+
+password - engine
+
+0sprey:1
+
+Name:    nsrca-prd-engine.ssc.lmco.com
+Address:  158.188.1.7
+
+
+nsrca-rhvp1
+
+
+
+
+
+
+[root@nsrca-rhvp2 ~]# subscription-manager status
++-------------------------------------------+
+   System Status Details
++-------------------------------------------+
+Overall Status: Disabled
+Content Access Mode is set to Simple Content Access. This host has access to content, regardless of subscription status.
+
+
+
+node status: OK
+
+
+
+
+[root@nsrca-rhvp1 ~]# systemctl status vdsmd
+● vdsmd.service - Virtual Desktop Server Manager
+   Loaded: loaded (/usr/lib/systemd/system/vdsmd.service; enabled; vendor preset: disabled)
+   Active: failed (Result: exit-code) since Thu 2022-10-27 20:43:18 UTC; 8s ago
+  Process: 1232539 ExecStartPre=/usr/libexec/vdsm/vdsmd_init_common.sh --pre-start (code=exited, status=1>
+
+Oct 27 20:43:18 nsrca-rhvp1.ssc.lmco.com systemd[1]: vdsmd.service: Service RestartSec=100ms expired, sch>
+Oct 27 20:43:18 nsrca-rhvp1.ssc.lmco.com systemd[1]: vdsmd.service: Scheduled restart job, restart counte>
+Oct 27 20:43:18 nsrca-rhvp1.ssc.lmco.com systemd[1]: Stopped Virtual Desktop Server Manager.
+Oct 27 20:43:18 nsrca-rhvp1.ssc.lmco.com systemd[1]: vdsmd.service: Start request repeated too quickly.
+Oct 27 20:43:18 nsrca-rhvp1.ssc.lmco.com systemd[1]: vdsmd.service: Failed with result 'exit-code'.
+Oct 27 20:43:18 nsrca-rhvp1.ssc.lmco.com systemd[1]: Failed to start Virtual Desktop Server Manager.
+
+
+[root@nsrca-rhvp1 ~]# systemctl restart vdsmd
+Job for vdsmd.service failed because the control process exited with error code.
+See "systemctl status vdsmd.service" and "journalctl -xe" for details.
+
+ Unit oneagent.service has failed.
+--
+-- The result is failed.
+Oct 27 20:48:07 nsrca-rhvp1.ssc.lmco.com systemd[1]: ovirt-ha-agent.service: Service RestartSec=10s expir>
+Oct 27 20:48:07 nsrca-rhvp1.ssc.lmco.com systemd[1]: ovirt-ha-agent.service: Scheduled restart job, resta>
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: https://access.redhat.com/support
+--
+-- Automatic restarting of the unit ovirt-ha-agent.service has been scheduled, as the result for
+-- the configured Restart= setting for the unit.
+Oct 27 20:48:07 nsrca-rhvp1.ssc.lmco.com systemd[1]: Stopped oVirt Hosted Engine High Availability Monito>
+-- Subject: Unit ovirt-ha-agent.service has finished shutting down
+-- Defined-By: systemd
+-- Support: https://access.redhat.com/support
+--
+-- Unit ovirt-ha-agent.service has finished shutting down.
+Oct 27 20:48:07 nsrca-rhvp1.ssc.lmco.com systemd[1]: Starting Virtual Desktop Server Manager...
+-- Subject: Unit vdsmd.service has begun start-up
+-- Defined-By: systemd
+-- Support: https://access.redhat.com/support
+
+-- Unit mom-vdsm.service has failed.
+--
+-- The result is dependency.
+Oct 27 21:24:05 nsrca-rhvp1.ssc.lmco.com systemd[1]: mom-vdsm.service: Job mom-vdsm.service/start failed >
+Oct 27 21:24:05 nsrca-rhvp1.ssc.lmco.com systemd[1]: vdsmd.service: Service RestartSec=100ms expired, sch>
+Oct 27 21:24:05 nsrca-rhvp1.ssc.lmco.com systemd[1]: vdsmd.service: Scheduled restart job, restart counte>
+-- Subject: Automatic restarting of a unit has been scheduled
+-- Defined-By: systemd
+-- Support: https://access.redhat.com/support
+--
+-- Automatic restarting of the unit vdsmd.service has been scheduled, as the result for
+-- the configured Restart= setting for the unit.
+Oct 27 21:24:05 nsrca-rhvp1.ssc.lmco.com systemd[1]: Stopped Virtual Desktop Server Manager.
+
+
+ALLOW IPv4 22/tcp from 0.0.0.0/0
+
+[root@distribution-rh8-lts-2 cloud-user]# firewall-cmd --list-all
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: eth0
+  sources:
+  services: cockpit dhcpv6-client ssh
+  ports: 111/tcp 2049/tcp 8081/tcp 8082/tcp 8083/tcp 8091/tcp 8092/tcp 8093/tcp
+  protocols:
+  forward: no
+  masquerade: no
+  forward-ports:
+  source-ports:
+  icmp-blocks:
+  rich rules:
+
+
+
+[root@cf-opn-vfdc-cf-02-id1 cloud-user]# firewall-cmd --list-all
+public (active)
+  target: default
+  icmp-block-inversion: no
+  interfaces: eth0
+  sources:
+  services: cockpit dhcpv6-client ssh
+  ports:
+  protocols:
+  forward: no
+  masquerade: no
+  forward-ports:
+  source-ports:
+  icmp-blocks:
+  rich rules:
+
+stack user
+Qt9KXy08cgm7nl9fOu!
+
+
+[root@cf-opn-vfdc-cf-02-id1 cloud-user]# who
+cloud-user pts/0        2022-12-19 17:43 (156.82.80.170)
+cloud-user pts/13       2022-12-19 18:03 (192.168.10.200)
+[root@cf-opn-vfdc-cf-02-id1 cloud-user]# time
+
+
+Name
+RHSatellite
+ID
+1877aa44-1ed3-4fe1-a9b7-d7205efe0a01
+Description
+-
+Project ID
+7dc30fd9ab154239b883a7259007038f
+
+
+
+Jan 15 03:45:16 nsrea-ospd-director dnsmasq-dhcp[86721]: DHCPDISCOVER(tapf2676181-b1) 10.224.3.115 94:
+40:c9:43:00:1e no address available
+
+
+To diagnose the problem, try running: 'rpm -Va --nofiles --nodigest'.
+You probably have corrupted RPMDB, running 'rpm --rebuilddb' might fix the issue.
+The downloaded packages were saved in cache until the next successful transaction.
+You can remove cached packages by executing 'dnf clean packages'.
+
+[root@vfdc-156-82-64-83 cloud-user]# cat /etc/fstab
+UUID=0bd700f8-090f-4556-b797-b340297ea1bd       /       xfs     defaults        0       0
+/dev/vg-cassandra-dr-qa/lv-datastax-dr-qa /lv-datastax-dr-qa ext4 defaults 0 0
+/dev/vg-cassandra-dr-qa/lv-commitlog /lv-commitlog ext4 defaults 0 0
+
+
+
+ yum -y update --exclude=iptables,sssd-common
+
+

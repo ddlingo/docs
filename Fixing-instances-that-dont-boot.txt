@@ -1,0 +1,115 @@
+Instance boot failure recovery (fstab issues or otherwise)
+
+1. Determine if the instance root volume is cinder backed or ephemeral backed.
+	a. For an ephemeral backed root volume, continue to Section A.
+	b. For a cinder backed root volume, continue to Section B.
+
+========================== Section A ==========================
+1. SSH in to the director.
+
+2. Create a temporary directory on a partition with plenty of space.  (You will need enough space for the ephemeral disk and the base disk image.)
+
+3. Change into your temp directory to work.
+
+4. Copy instance ephemeral disk to your temp directory.  For example, if the instance UUID is 60fbefed-983f-4ff9-b916-21b21d48fa9b and the instance is on compute-1, then the following example should work.
+	a. scp heat-admin@ddc01-novacompute-1.ctlplane:/var/lib/nova/instances/60fbefed-983f-4ff9-b916-21b21d48fa9b/disk ./60fbefed-983f-4ff9-b916-21b21d48fa9b-disk
+
+5. Determine the base image used by the ephemeral disk.  (This is the backing file)
+	a. $ file 60fbefed-983f-4ff9-b916-21b21d48fa9b-disk
+             60fbefed-983f-4ff9-b916-21b21d48fa9b-disk: QEMU QCOW Image (v3), has backing file (path /var/lib/nova/instances/_base/44a2e4cddf1ca35d449b5ab6544ffd858585cd23)
+
+6. check to see if the base image already exists on the director from a previous operation.
+	a. $ ls -l /var/lib/nova/instances/_base/44a2e5cddf1ca35d449b5ab6544ffd858585cd23
+             -rw-r--r--. 1 root root 4294967296 Aug  2 18:48 /var/lib/nova/instances/_base/44a2e5cddf1ca35d449b5ab6544ffd858585cd23
+
+7. If the base image doesn't exist, scp it over from the same compute node.
+	a . cp heat-admin@ddc01-novacompute-1.ctlplane:/var/lib/nova/instances/_base/44a2e5cddf1ca35d449b5ab6544ffd858585cd23 /var/lib/nova/instances/_base/44a2e5cddf1ca35d449b5ab6544ffd858585cd23
+
+8. Merge the ephemeral disk and the base image.
+	a. qemu-img rebase -F qcow2 -b '' -f qcow2 60fbefed-983f-4ff9-b916-21b21d48fa9b-disk
+
+9. Connect the image to a block device on the director
+	a.  qemu-nbd -c /dev/nbd1 -f qcow2 60fbefed-983f-4ff9-b916-21b21d48fa9b-disk
+
+10.  determine the root partition
+	a. # fdisk -l /dev/nbd1
+             Disk /dev/nbd1: 120 GiB, 128849018880 bytes, 251658240 sectors
+             Units: sectors of 1 * 512 = 512 bytes
+             Sector size (logical/physical): 512 bytes / 512 bytes
+             I/O size (minimum/optimal): 512 bytes / 512 bytes
+             Disklabel type: dos
+             Disk identifier: 0x14fc63d2
+
+             Device      Boot Start       End   Sectors  Size Id Type
+             /dev/nbd1p1 *     2048 251658206 251656159  120G 83 Linux
+
+12.  Mount the partition.
+	a. mount /dev/nbd1p1 /mnt/tmp
+
+13.  Inspect the partition.  For normal files, like /etc/fstab, you can directly access /mnt/tmp/etc/fstab.  For other tasks, like grub changes, bind mount special file systems under /mnt/tmp and chroot into the environment.
+
+14.  When finished, unmount the partition
+	a. umount /dev/nbd1p1
+
+15.  Disconnect the image from the block device
+	a. qemu-nbd -d /dev/nbd1
+
+16.  If repairs to the root volume were required, skip to section C.
+
+========================== Section B ==========================
+1. SSH into the director.
+
+2. Show the instance and copy down the volume id attached to the instance.  (NOTE: if there is more than one volume attached, show each volume to see the device attachment.  the volume attached to the device /dev/vda is the root volume)
+	a. openstack server show --fit -c attached_volumes <server name or ID>
+
+3. Make a clone of the volume:
+	a. openstack volume create --source <volume ID> --description "incxxxx DELETE ME" --size <vol size> vol-clone-incxxxx
+
+4. Attach the cloned volume to the snap-mounter or another instance.
+	a. openstack server add volume snap-mounter bd92f1f5-fa83-4a6c-b05b-e586b943d3ba
+
+5. SSH into the instance the volume was just attached to.
+	a. ssh cloud-user@<instance ip>
+
+6. Determine the which block device is the newly attached volume.  (It should be the most recently detected block device)
+	a. # dmesg -T | grep "capacity change from 0"  | cut -d' ' -f 7 | tail -n 1
+             vdf:
+
+7. determine the root partition
+	a. # fdisk -l /dev/vdf
+             Disk /dev/vdf: 120 GiB, 128849018880 bytes, 251658240 sectors
+             Units: sectors of 1 * 512 = 512 bytes
+             Sector size (logical/physical): 512 bytes / 512 bytes
+             I/O size (minimum/optimal): 512 bytes / 512 bytes
+             Disklabel type: dos
+             Disk identifier: 0x14fc63d2
+
+             Device      Boot Start       End   Sectors  Size Id Type
+             /dev/vdf1 *     2048 251658206 251656159  120G 83 Linux
+
+8.  Mount the partition.
+	a. mount /dev/vdf1 /mnt/tmp
+
+9.  Inspect the partition.  For normal files, like /etc/fstab, you can directly access /mnt/tmp/etc/fstab.  For other tasks, like grub changes, bind mount special file systems under /mnt/tmp and chroot into the environment.
+
+10.  When finished, unmount the partition
+	a. umount /dev/vdf1
+
+11.  Log out of the instance.
+
+12.  Disconnect the cloned volume from the instance
+	a. openstack server remove volume snap-mounter bd92f1f5-fa83-4a6c-b05b-e586b943d3ba
+
+13.  If repairs to the root volume were required, skip to section C.
+
+
+========================== Section C ==========================
+
+Since you can not replace or otherwise detach a root volume from an instance, as of RHOSP 16.2, any changes to the root volume will require a new instance to be created.  
+
+If you were working with an ephemeral volume, you can upload the merged image in to glance.  The image should then be used to create a volume, and the instance launched using the volume.  Do not launch another ephemeral instance.  The merged volume will be much larger than the original image and will waste space on the compute node.
+
+If you were working with a cinder volume, you should already have a modified root volume.  You can simply launch a new instance from the fixed volume.
+
+Any additional volumes can be detached from the broken instance and then re-attached to the new / working instance.  The only other difference between the new and old instances should be the IP address.  If the customer requests it, this can be moved by creating a port with the IP and attaching it to the new instance.
+

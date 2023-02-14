@@ -1,0 +1,60 @@
+Splunk Access List
+dl-EO, ENTSPLUNK.IIoT.User.Comms (US) on Active Directory
+dl-EO, ENTSPLUNK.CIS.App.DFARSFramework.User (US) on Active Directory
+dl-EO, ENTSPLUNK.PLT.User (US) on Active Directory
+dl-EO, ENTSPLUNK.PLT.App.NOC.User (US) on Active Directory
+entsplunk.qas.user (US) on Active Directory
+dl-EO, ENTSPLUNK.IIOT.User (US) on Active Directory
+
+
+
+
+
+
+
+I found a solution: While following the demo here (https://webcasts.us.lmco.com/viewerportal/egc/video.vp?programId=esc_program%3A314372, time index 22:52), one of the first things that's done is editing the /etc/hosts file to specify the FQDN for the host. This also works with non-routable addresses like "hostname.msol.us.lmco.local".
+I did the following:
+Made a backup copy of /etc/hosts as /etc/hosts.bak
+Added a line that specified <IP Address> <desired host name> <local host name>
+NOTE: The <local host name> must be the result of the 'hostname' command.
+Then removed and reinstalled the SplunkForwarder with:
+sudo systemctl stop SplunkForwarder
+sudo systemctl disable SplunkForwarder
+sudo yum remove -y splunkforwarder
+sudo rm /etc/systemd/system/SplunkForwarder.service
+sudo mv /opt/splunkforwarder /opt/splunkforwarder_tobedeleted
+sudo su - root
+curl https://splunk-software-library.s3-us-gov-west-1.amazonaws.com/Splunk_Scripts/install.sh -o install.sh
+./install.sh
+(The install script's source is here: https://gitlab.us.lmco.com/i2d2.hpg.entsplunk-solutions/linux-suf-install/-/blob/master/install.sh. The installer is discussed in the webcast recording starting at time index 34:05)
+The expected hostname is maintained even after service restarts and host restarts. (edited) 
+
+
+
+Free From Splunk: 
+Splunk Fundamentals 1
+Splunk Fundamentals 2 – Free for US Military Veterans
+Included from LM in partnership with Percipio: Spunk Channel
+Some course highlights:
+Splunk Administration
+Alerts & Capacity Planning
+Indexes & Storage
+Indexer Clusters & Advanced Search
+Data Analysis
+:fire:
+3
+
+| OS-DCF:diskConfig                   | MANUAL                                                                                 |
+| OS-EXT-AZ:availability_zone         | nova                                                                                   |
+| OS-EXT-SRV-ATTR:host                | vf01-novacompute-4.ssc.lmco.com                                                        |
+| OS-EXT-SRV-ATTR:hostname            | pomegranate-3-4                                                                        |
+| OS-EXT-SRV-ATTR:hypervisor_hostname | vf01-novacompute-4.ssc.lmco.com                                                        |
+| OS-EXT-SRV-ATTR:instance_name       | instance-00002868                                                                      |
+| OS-EXT-SRV-ATTR:kernel_id           |                                                                                        |
+| OS-EXT-SRV-ATTR:launch_index        | 0                                                                                      |
+| OS-EXT-SRV-ATTR:ramdisk_id          |                                                                                        |
+| OS-EXT-SRV-ATTR:reservation_id      | r-2gid0idl                                                                             |
+| OS-EXT-SRV-ATTR:root_device_name    | /dev/vda         
+
+openstack server show 1b4cbf25-a1ac-4b3e-a2a0-43e63b30e194
+| OS-EXT-STS:task_state               | deleting                                                                        

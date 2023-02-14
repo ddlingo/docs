@@ -1,0 +1,33 @@
+1. Check that AD group was created for the project
+openstack group list
+
+2. Check to see if project was created
+openstack project list
+
+3. change directory to cloudcatalog/openstack
+cd cloudcatalog/openstack
+
+4. Ensure new Openstack project is listed in the roles/ospmapping/vars/main.yaml
+vi roles/ospmapping/vars/main.yaml
+
+5. Fix project name to match AD group
+openstack project set --name "new_project_name" project UUID
+openstack project set --name "NGG-OPIR-ATLO-Digisim-MPSS-Openstack" project cea2f579ff0543d0a03fb11557a1a153
+
+6. Fix AD group with no spaces
+openstack group set --name "new_group_name" group UUID
+
+7. Copy roles/ospmapping/vars/main.yaml to roles/osponlymapping/vars/main.yaml
+cp roles/ospmapping/vars/main.yaml roles/osponlymapping/vars/main.yaml
+
+8. Run only_mapping playbook
+ansible-playbook only_mapping.yaml -e dialog_param_os_env=DDC --ask-vault-pass
+
+9. Ensure new project mapping is displayed 
+openstack mapping show lmsso | grep -i group_name
+
+10. Update git repo
+git status
+git add *
+git commit -am "updated new project to remove spaces"
+git push

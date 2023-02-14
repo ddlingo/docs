@@ -1,0 +1,1607 @@
+ 818  openstack server list
+  819  ssh heat-admin@10.224.1.37
+  820  ssh heat-admin@10.224.1.94
+  821  . dcf
+  822  . dcf01rc
+  823  ls
+  824  nova hypervisor-stats
+  825  openstack user list --domain lmco | grep e357623
+  826  . dcf01rc
+  827  openstack user list --domain lmco | grep e357623
+  828  openstack project list | grep 0e3225168d8a463fbf4d9c05c72c76ef
+  829  openstack project show 0e3225168d8a463fbf4d9c05c72c76ef
+  830  openstack project list | grep SSP
+  831  openstack project list | grep -i ssp
+  832  openstack group list | grep 7d9c0a2681c846dc9a28d551b043b897
+  833  openstack mapping list -f json lmsso | less
+  834  openstack mapping show -f json lmsso | less
+  835  openstack mapping list
+  836  openstack mapping show lmco_mapping
+  837  openstack mapping show lmco_mapping-p1
+  838  openstack federation protocol list
+  839  openstack federation protocol list lmco_mapping
+  840  openstack federation protocol list --identity-provider lmco_mapping
+  841  openstack federation protocol list --identity-provider lmco_mapping-p1
+  842  openstack mapping list
+  843  openstack federation protocol list --identity-provider lmco_mapping-0726
+  844  openstack federation protocol list --identity-provider lmco_mapping-0728
+  845  openstack federation domain list
+  846  openstack federation prpoject list
+  847  openstack federation project list
+  848  openstack group list
+  849  ls
+  850  openstack mapping list
+  851  openstack federation protocol list --identity-provider openidc
+  852  openstack federation protocol list --identity-provider openid
+  853  ls /tmp
+  854  ls
+  855  ls -l *.json
+  856  openstack mapping list
+  857  openstack domain list
+  858  openstack identity provider list
+  859  openstack identity provider show lmcoIDP
+  860  openstack federation protocol list
+  861  openstack federation protocol list --identity-provider lmcoIDP
+  862  openstack mapping show temp_mapping -f json | less
+  863  openstack group list
+  864  openstack group list | grep -i spp
+  865  openstack project list | grep -i spp
+  866  openstack project show --max-width 120 0951c30bb5b64cffb384f6cd9c3a2ccf
+  867  openstack server list --project 0951c30bb5b64cffb384f6cd9c3a2ccf
+  868  grep iaas ~/templates/*
+  869  openstack server list
+  870  ssh heat-admin@10.224.1.37
+  871  ls
+  872  cat test.txt
+  873  cd cloudcatalog/openstack/
+  874  ls
+  875  vi roles/ospmapping/tasks/main.yaml
+  876  git pull
+  877  vi openstack/roles/ospmapping/vars/main.yaml
+  878  vi roles/ospmapping/vars/main.yaml
+  879  exit
+  880  ping 160.205.16.1
+  881  ping 160.205.16.5
+  882  ping 160.205.16.10
+  883  ping 160.205.16.11
+  884  ping 160.205.16.200
+  885  ping 160.205.16.201
+  886  ping 160.205.8.1
+  887  ping 160.205.8.2
+  888  ping 160.205.8.3
+  889  ping 160.205.8.4
+  890  ping 160.205.8.5
+  891  ping 160.205.8.10
+  892  cat /etc/openstack/clouds.yaml
+  893  exit
+  894  ping 158.188.69.1
+  895  ping 158.188.69.7
+  896  ping 158.188.69.8
+  897  ping 158.188.69.101
+  898  ls templates/network_data.yaml
+  899  cat templates/network_data.yaml
+  900  ping 158.188.69.201
+  901  cat /etc/resolv.conf
+  902  ping 158.188.69.201
+  903  ssh kni@158.188.69.201
+  904  ls
+  905  . dcf01rc
+  906   openstack ip availability list
+  907  exit
+  908  cat dcf01rc
+  909  openstack server list
+  910  ssh heat-admin@10.224.1.37
+  911  cat dcf01rc
+  912  . dcf01rc
+  913  openstack server list --all-projects
+  914  openstack server list --all-projects -c Name
+  915  openstack server list --all-projects -c Name -f value
+  916  openstack server list --all-projects -c Name -f value  | wc -k
+  917  openstack server list --all-projects -c Name -f value  | wc -l
+  918  exit
+  919  ip a
+  920  ls
+  921  df -h
+  922  cd templates
+  923  ls
+  924  cd
+  925  ls
+  926  ip a
+  927  clear
+  928  ls
+  929  cat templates/network_data.yaml
+  930  df -h
+  931  ls
+  932  sudo -i
+  933  exit
+  934  chronyc sources
+  935  sudo yum update
+  936  sudo subscription-manager repos --enable=rhel-8-for-x86_64-baseos-eus-rpms --enable=rhel-8-for-x86_64-appstream-eus-rpms --enable=rhel-8-for-x86_64-highavailability-eus-rpms --enable=ansible-2.9-for-rhel-8-x86_64-rpms --enable=openstack-16.1-for-rhel-8-x86_64-rpms --enable=fast-datapath-for-rhel-8-x86_64-rpms --enable=advanced-virt-for-rhel-8-x86_64-rpms
+  937   subscription-manager register --org="SSC_INISTAR_INFRA" --activationkey="osp-prd" --force
+  938  sudo -i
+  939  sudo  subscription-manager register --org="SSC_INISTAR_INFRA" --activationkey="osp-prd" --force
+  940  sudo yum update
+  941  sudo subscription-manager repos --enable=rhel-8-for-x86_64-baseos-eus-rpms --enable=rhel-8-for-x86_64-appstream-eus-rpms --enable=rhel-8-for-x86_64-highavailability-eus-rpms --enable=ansible-2.9-for-rhel-8-x86_64-rpms --enable=openstack-16.1-for-rhel-8-x86_64-rpms --enable=fast-datapath-for-rhel-8-x86_64-rpms --enable=advanced-virt-for-rhel-8-x86_64-rpms
+  942  sudo yum update
+  943  subscription-manager release --set 8.2
+  944  sudo subscription-manager release --set 8.2
+  945  yum update
+  946  yum clean all
+  947  sudo yum clean all
+  948  sudo -i
+  949  ip a
+  950  pwd
+  951  clear
+  952  ls
+  953  cd templates
+  954  ls
+  955  mkdir extraconfigs
+  956  cd extraconfigs/
+  957  ls
+  958  cd ..
+  959  ls
+  960  touch parameters_extraconfigs.yaml
+  961  rm -rf extraconfigs/
+  962  vi parameters_extraconfigs.yaml
+  963  ls
+  964  cat network-extra.yaml
+  965  ls
+  966  vi parameters_extraconfigs.yaml
+  967  openstack server list
+  968  ssh heat-admin@10.224.1.74
+  969  ssh heat-admin@10.224.1.94
+  970  ls
+  971  . dcf01rc
+  972  openstack server list --all-projects
+  973  openstack server list | grep jedi-test8
+  974  openstack server list | grep -i jedi-test8
+  975  openstack server list --all-projects | grep -i jedi-test8
+  976  openstack server show ce53bce5-b54a-484a-b9be-49c70a0030f5
+  977  openstack image list | grep 40755f42-6de8-482b-8bbd-d815097f3afc
+  978  exit
+  979  cd templates
+  980  ls
+  981  grep cinder cinder-netapp-config.yaml
+  982  ls
+  983  . dcf01rc
+  984  openstack image list
+  985  . dcf01rc
+  986  openstack project list
+  987  openstack project list | grep sav
+  988  openstack project list | grep savant
+  989  openstack project list | grep -i savant
+  990  ls
+  991  cat tripleo-undercloud-outputs.yaml
+  992  ls |grep *.rc
+  993  ls |grep *rc
+  994  ls |grep *rc*
+  995  echo OS_AUTH_URL
+  996  echo $OS_AUTH_URL
+  997  cat stackrc
+  998  openstack project list
+  999  source stackrc
+ 1000  openstack project list
+ 1001  history
+ssh heat-admin@vfd01-novacompute-0.ctlplane
+for i in `openstack server list --all-projects -c ID -f value`;     do temp=$(openstack sever show $i -c OS-EXT-STS:power_state -f value);         if $temp == "paused":;             openstack server unpause $i
+for i in `openstack server list --all-projects -c ID -f value`;     do temp=$(openstack sever show $i -c OS-EXT-STS:power_state -f value);         if $temp == "paused":;             openstack server unpause $i;done
+ ssh heat-admin@vfd01-novacompute-0.ctlplane
+  763  ssh heat-admin@vfd01-controller-0.ctlplane
+  764  ssh heat-admin@vfd01-controller-1.ctlplane
+  765  ssh heat-admin@vfd01-controller-2.ctlplane
+ 5  cd sosreport-ddc-158-188-81-35-3706084-2022-03-24-
+    6  cd sosreport-ddc-158-188-81-35-3706084-2022-03-24-yvqzomx
+    7  ls
+    8  cd etc/systemd/system
+    9  ls -l
+   10  vim authserver.service
+   11  cd temp
+   12  ls
+   13  cd sosreport-ddc-158-188-81-35-3706084-2022-03-24-yvqzomx
+   14  ls
+   15  cd sos_commands
+   16  ls
+   17  cd networking/
+   18  ls
+   19  vim netstat_-W_-neopa
+   20  cd ../../var/log
+   21  ls
+   22  tail messages
+   23  tail audit/audit.log
+   24  cd
+   25  cd  temp
+   26  cd sosreport-ddc-158-188-81-35-3706084-2022-03-24-yvqzomx
+   27  ls
+   28  cd var/log
+   29  less messages
+   30  cd
+   31  . vfd01rc
+   32  ls
+   33  . stack
+   34  . stackrc
+   35  openstack server list
+   36  openstack server list --host vfd01-novacompute-0.ssc.lmco.com --all-projects
+   37  . vfd01rc
+   38  openstack server list --host vfd01-novacompute-0.ssc.lmco.com --all-projects
+   39  . stackrc
+   40  openstack baremetal maintenance mode set --reason "testing migration from enabling maintenance mode" d45d6bd2-0888-4b72-82f1-3c3bd27a351a
+   41  openstack baremetal node maintenance set --reason "testing migration from enabling maintenance mode" d45d6bd2-0888-4b72-82f1-3c3bd27a351a
+   42  openstack server list
+   43  openstack baremetal node list
+   44  openstack baremetal node maintenance set --reason "testing migration from enabling maintenance mode" ca2643e6-0116-4224-96a6-edbf67c46910
+   45  openstack baremetal node list
+   46  . vfd01rc
+   47  openstack server list --host vfd01-novacompute-0.ssc.lmco.com --all-projects
+   48  ssh heat-admin@vfd01-novacompute-0.ctlplane
+   49  openstack server list
+   50  openstack server list --all-projects
+   51  . stackrc
+   52  openstack baremetal node list
+   53  openstack baremetal node maintenance unset ca2643e6-0116-4224-96a6-edbf67c46910
+   54  openstack baremetal node list
+   55  . vfd01rc
+   56  openstack volume list
+   57  openstack volume backup
+   58  openstack volume backup create --help
+   59  openstack volume backup create --name test-backup-one 70dd0f01-e072-4f32-aa3c-0cc5ae85ab1f
+   60  cinder service-list
+   61  cd temp
+   62  ls
+   63  df -h
+   64  ls
+   65  mv ../sosreport-ddc-158-188-81-53-3706084-2022-04-05-lenmimh.tar.xz .
+   66  tar -xzvf sosreport-ddc-158-188-81-53-3706084-2022-04-05-lenmimh.tar.xz
+   67  tar -xJvf sosreport-ddc-158-188-81-53-3706084-2022-04-05-lenmimh.tar.xz
+   68  cd sosreport-ddc-158-188-81-53-3706084-2022-04-05-lenmimh
+   69  ls
+   70  cd etc/systemd/
+   71  ls
+   72  cd system
+   73  ls
+   74  ls -l
+   75  cd ..
+   76  ls
+   77  ls user
+   78  cd ..
+   79  ls
+   80  pwd
+   81  cd ../sos_commands/
+   82  ls
+   83  ls -l
+   84  cd systemd
+   85  ls
+   86  less ls_-lR_.lib.systemd
+   87  ls
+   88  less journalctl_--list-boots
+   89  cd ..
+   90  ls
+   91  cd process
+   92  ls
+   93  less ps_-elfL
+   94  cd ..
+   95  ls
+   96  cd networking/
+   97  ls
+   98  less netstat_-W_-neopa
+   99  ls
+  100  sudo -i
+  101  cd
+  102  ls
+  103  cd temp
+  104  ls
+  105  ll
+  106  cd sosreport-ddc-158-188-81-53-3706084-2022-03-23-caozbuz
+  107  ls
+  108  cat v
+  109  cat version.txt
+  110  ls
+  111  cat environment
+  112  ls sys
+  113  cat etc/hostname
+  114  ls -l
+  115  ls hostname
+  116  ls hostname/
+  117  cat hostname
+  118  less netstat
+  119  less pstree
+  120  less netstat
+  121  cd ..
+  122  cd sosreport-ddc-158-188-81-53-3706084-2022-04-05-lenmimh
+  123  less pstree
+  124  less netstat
+  125  ls
+  126  cd sos_commands/
+  127  ls
+  128  less ../pstree
+  129  cd systemd/
+  130  ls
+  131  grep java *
+  132  less systemctl_status_--all
+  133  netstat -nl | less
+  134  lsof -i | grep LISTEN
+  135  tail /etc/passwd
+  136  ls
+  137  mv sosreport-ddc-158-188-81-53-3706084-2022-04-07-jtixeop.tar.xz temp
+  138  cd temp
+  139  ls
+  140  tar -xJf sosreport-ddc-158-188-81-53-3706084-2022-04-07-jtixeop.tar.xz
+  141  cd sosreport-ddc-158-188-81-53-3706084-2022-04-07-jtixeop
+  142  ls
+  143  cd sos_commands/networking/
+  144  ls ..
+  145  ls
+  146  cd ..
+  147  less netstat
+  148  ls
+  149  cd var/log
+  150  ls
+  151   less messages
+  152  ls
+  153  cd audit/
+  154  ls -l
+  155  tail audit.log
+  156  grep AVC audit.log
+  157  aureport -a -if audit.log
+  158  cd ..
+  159  ls
+  160  cd ../..
+  161  ls
+  162  ls -l
+  163  cd sosreport-ddc-158-188-81-53-3706084-2022-03-22-ihhtmof
+  164  cd var/log
+  165  ls
+  166  less messages
+  167  ls
+  168  ls -l
+  169  tail secure
+  170  ls
+  171  cd temp
+  172  ls
+  173  cd sosreport-ddc-158-188-81-53-3706084-2022-04-07-jtixeop
+  174  ls
+  175  cd etc
+  176  ls
+  177  cat environment
+  178  ls
+  179  mv environment environment.bak
+  180  touch environment
+  181  mv -f environment.bak  environment
+  182  ls -l
+  183  ls
+  184  cat environment
+  185  cat /etc/resolv.conf
+  186  ping satellite.us.lmco.com
+  187  ls
+  188  cp deploy.sh add_monitoring.sh
+  189  ls
+  190  vi add_monitoring.sh
+  191  cd templates/
+  192  ls
+  193  vi data-collection.yaml
+  194  vi network_data.yaml \
+  195  vi network_data.yaml
+  196  vi storage-environment.yaml
+  197  vi data-collection.yaml
+  198  cd
+  199  ls
+  200  vi add_monitoring.sh
+  201  clear
+  202  vi data-collection.yaml
+  203  vi templates/data-collection.yaml
+  204  ./add_monitoring.sh
+  205  clear
+  206  vi templates/data-collection.yaml
+  207  vi add_monitoring.sh
+  208  ./add_monitoring.sh
+  209  clear
+  210  sudo podman ps
+  211  sudo podman ps | grep prometheus
+  212  clear
+  213  sudo podman ps | grep amq
+  214  ls
+  215  vi add_monitoring.sh
+  216  vi templates/data-collection.yaml
+  217  vi templates/
+  218  vi templates/enable-stf.yaml
+  219  vi add_monitoring.sh
+  220  ping 8.8.8.8
+  221  clear
+  222  . vfd01rc
+  223  openstack server list
+  224  openstack server show --max-width 100 6cb714ad-238c-4da2-85da-2398f3cedf26
+  225  ssh heat-admin@vfd01-novacmopute-0.ctlplane
+  226  ssh heat-admin@vfd01-novacompute-0.ctlplane
+  227  exit
+  228  ping 156.82.66.75
+  229  arping --help
+  230  arping 156.82.79.254
+  231  ip link show
+  232  ip a show
+  233  arping 156.82.79.254 -I bond0.2410
+  234  arping 156.82.66.75 -I bond0.2410
+  235  ping 156.82.66.75
+  236  ping 156.82.66.75 -I bond0.2410
+  237  arping 156.82.66.75 -I bond0.2410
+  238  ping 156.82.66.75
+  239  exit
+  240  ssh heat-admin@vfd01-novacompute-0.ctlplane
+  241  ls
+  242  cd templates/
+  243  ls
+  244  cd nic-config/
+  245  ls
+  246  ls -l
+  247  vim compute.yaml
+  248  sudo -i
+  249  exit
+  250  ls
+  251  cd
+  252  openstack server list
+  253  . vfd01rc
+  254  openstack server list
+  255  openstack server show test-instance
+  256  openstack volume show da08c0f7-8f6c-4733-a0a2-84c422dd56b3
+  257  env
+  258  ls
+  259  openstack server list
+  260  openstack volume show da08c0f7-8f6c-4733-a0a2-84c422dd56b3
+  261  openstack volume snapshot create
+  262  openstack volume snapshot create --volume da08c0f7-8f6c-4733-a0a2-84c422dd56b3 --description "test snap" my-vol-snap
+  263  openstack volume snapshot create --volume da08c0f7-8f6c-4733-a0a2-84c422dd56b3 --description "test snap" --force my-vol-snap
+  264  openstack volume snapshot list
+  265  openstack volume create
+  266  openstack volume create --snapshot 94048cfa-df07-4502-9bb4-36f903f8d789 snap-vol-test
+  267  openstack volume list
+  268  openstack server list
+  269  ssh cloud-user@156.82.66.75
+  270  openstack server show --fit-width test-instance
+  271  openstack flavor list
+  272  openstack image list
+  273  openstack security group list
+  274  openstack server create --flavor test --image b6b06638-7d5e-4197-a1a2-5c3f04c80f18 --security-group 69def695-ec7f-4e80-9ca3-7781f3c2cca7 --boot-from-volume 10 --key-name stack_admin snap-reader
+  275  openstack keypair list
+  276  openstack keypair create --public-file ~/.ssh/id_rsa.pub  stack_admin
+  277  openstack keypair create --public-key ~/.ssh/id_rsa.pub  stack_admin
+  278  openstack project list | grep admin
+  279  openstack network list | grep provider
+  280  openstack server create --flavor test --image b6b06638-7d5e-4197-a1a2-5c3f04c80f18 --security-group 9fd0f8d0-feca-4f2f-bfe7-352293e85db9 --boot-from-volume 10 --key-name stack_admin --nic net-id=provider-2430 snap-reader
+  281  openstack volume list
+  282  openstack server volume add
+  283  openstack server add volume
+  284  openstack server add volume snap-reader e6b9c168-0577-45ac-86eb-6985b0e344bc
+  285  openstack server list
+  286  openstack server add volume snap-reader e6b9c168-0577-45ac-86eb-6985b0e344bc
+  287  ssh cloud-user@156.82.66.72
+  288  openstack server remove volume snap-reader e6b9c168-0577-45ac-86eb-6985b0e344bc
+  289  openstack volume list
+  290  openstack volume delete e6b9c168-0577-45ac-86eb-6985b0e344bc
+  291  openstack volume snapshot list
+  292  openstack volume snapshot delete 94048cfa-df07-4502-9bb4-36f903f8d789
+  293  openstack volume snapshot create
+  294  openstack volume snapshot create --force --volume de6dcafa-9aab-4190-8c85-426ea23e6f11 new-snap-test
+  295  openstack volume snapshot list
+  296  openstack volume create --snapshot 8cb1ab38-94a0-4444-a8a0-2b27849c9f23 my-new-snap-vol
+  297  openstack volume list
+  298  openstack server add volume snap-reader 213df38a-28be-410a-8952-d6f8c6fcd021
+  299  ssh cloud-user@156.82.66.72
+  300  man xfs_admin
+  301  ssh cloud-user@156.82.66.72
+  302  man xfs_admin
+  303  ssh cloud-user@156.82.66.72
+  304  ls
+  305  openstack server list
+  306  openstack server delete snap-reader
+  307  openstavk volume snapshot list
+  308  openstack volume snapshot list
+  309  openstack volume snapshot delete new-snap-test
+  310  openstack volume list
+  311  openstack volume delete de6dcafa-9aab-4190-8c85-426ea23e6f11
+  312  openstack volume delete 213df38a-28be-410a-8952-d6f8c6fcd021
+  313  ls
+  314  exit
+  315  ls
+  316  cat | base64 -d | gzip -dc > osp_debug.sh
+  317  vim osp_debug.sh
+  318  vim inventory.sh
+  319  ls
+  320  vim inventory.sh
+  321  ansible -b -i inventory.sh -m ping
+  322  ansible -b -i inventory.sh -m ping Controller
+  323  chmod +x inventory.sh
+  324  ansible -b -i inventory.sh -m ping Controller
+  325  bash osp_debug.sh
+  326  bash osp_debug.sh get --controller --nova
+  327  vim osp_debug.sh
+  328  bash osp_debug.sh get --controller --nova
+  329  . vfd01rc
+  330  openstack server list
+  331  bash osp_debug.sh
+  332  bash osp_debug.sh get --compute --nova
+  333  bash osp_debug.sh enable --compute --nova
+  334  openstack server list
+  335  ssh heat-admin@vfd01-novacompute-0.ctlplane
+  336  bash osp_debug.sh get --controller --nova
+  337  bash osp_debug.sh enable --controller --nova
+  338  bash osp_debug.sh enable --controller --neutron
+  339  vim osp_debug.sh
+  340  sudo -i
+  341  exit
+  342  ls
+  343  ls sosreport
+  344  ls sosreports
+  345  mkdir inc3732779
+  346  mv sosreport-tardisinfrasvr-3732779-2022-04-26-eboznnz.tar.xz inc3732779/
+  347  cd in
+  348  cd inc3732779/
+  349  ls
+  350  tar -xJf sosreport-tardisinfrasvr-3732779-2022-04-26-eboznnz.tar.xz
+  351  ls
+  352  tar -C . -xJf sosreport-tardisinfrasvr-3732779-2022-04-26-eboznnz.tar.xz
+  353  ls -l sosreport-tardisinfrasvr-3732779-2022-04-26-eboznnz/var/log/audit/audit.log
+  354  ls -l sosreport-tardisinfrasvr-3732779-2022-04-26-eboznnz/var/log/audit/
+  355  ls -l sosreport-tardisinfrasvr-3732779-2022-04-26-eboznnz
+  356  sudo tar -C . -xJf sosreport-tardisinfrasvr-3732779-2022-04-26-eboznnz.tar.xz
+  357  ls
+  358  sudo -i
+  359  ls
+  360  cd inc3732779/
+  361  ls
+  362  cd sosreport-tardisinfrasvr-3732779-2022-04-26-eboznnz
+  363  sudo -i
+  364  openstack server list
+  365  ssh heat-admin@10.224.2.42
+  366  ls
+  367  mkdir inc3770765
+  368  cd inc37
+  369  cd inc3770765/
+  370  mv ../sos-reports.zip .
+  371  unzip sos-reports.zip
+  372  l
+  373  ls
+  374  tar -xJf sosreport-vfdc-156-82-64-16-2022-04-26-mqgqjev.tar.xz
+  375  ls
+  376  cd sos
+  377  cd sosreport-vfdc-156-82-64-
+  378  cd sosreport-vfdc-156-82-64-16-2022-04-26-mqgqjev
+  379  ls
+  380  cd var/log
+  381  ls
+  382  ls
+  383  ls
+  384  ls -l
+  385  less secure
+  386  ls
+  387  less messages
+  388  egrep -i 'oom|out of memory' messages
+  389  cd ..
+  390  ls
+  391  cd ..
+  392  ls
+  393  cd sos_commands
+  394  ls
+  395  cd process
+  396  ls
+  397  less ps_-elfL
+  398  less pstree_-lp
+  399  cd ..
+  400  ls
+  401  cd ..
+  402  cd etc
+  403  l
+  404  cd systemd
+  405  ls
+  406  cd system
+  407  ls
+  408  cd ..
+  409  cd user
+  410  ls
+  411  cd ..
+  412  ls
+  413  ls system
+  414  cd ..
+  415  cd usr/lib/systemd/system
+  416  ls
+  417  cd ..
+  418  ls
+  419  cd ..
+  420  ls
+  421  cd .
+  422  cd ..
+  423  cd etc
+  424  ls
+  425  ls rc.d
+  426  ls rc.d/init.d/
+  427  less rc.d/init.d/splunk
+  428  cd ..
+  429  ls
+  430  cd sos_commands/
+  431  ls
+  432  cd process
+  433  ls
+  434  less ps_alxwww
+  435  less ps_auxwwwm
+  436  cat ps_auxwwwm  | cut -d' ' -f 1,4,5,6,11
+  437  cat ps_auxwwwm  | cut -d'\t' -f 1,4,5,6,11
+  438  less ps_auxwwwm
+  439  cat ps_auxwwwm  | cut -d'\t' -f 1,4,5,6,11| head
+  440  cat ps_auxwwwm  | cut -d' ' -f 1,4,5,6,11 | head
+  441  less ps_auxwwwm
+  442  ls
+  443  cd ..
+  444  cd ../etc
+  445  cd systemd
+  446  ls
+  447  cd system
+  448  ls
+  449  cd ..
+  450  s
+  451  cd ..
+  452  ls
+  453  cd var/log
+  454  ls
+  455  ls -l
+  456  ls ..
+  457  ls ../spool/
+  458  ls ../ilb
+  459  ls ../lib
+  460  ls
+  461  tail messages
+  462  grep "Apr 26 15" messages| less
+  463  grep "Apr 26 1" messages| less
+  464  egrep 'BOOT_IMAGE|oom' messages | tail
+  465  egrep 'BOOT_IMAGE|oom' messages
+  466  vim messages
+  467  grep "Apr 25 17:20" messages | grep sshd | wc -l
+  468  cd ..
+  469  ls
+  470  cd ..
+  471  ls
+  472  cd proc
+  473  ls
+  474  cat cpuinfo
+  475  cd
+  476  ls
+  477  df
+  478  ls
+  479  cd inc3770765/
+  480  ls
+  481  cd sosreport-vfdc-156-82-64-16-2022-04-26-mqgqjev
+  482  ls
+  483  cd var/log/
+  484  history | grep egrep
+  485  egrep 'BOOT_IMAGE|oom' messages
+  486  egrep -i 'BOOT_IMAGE|out of memory' messages
+  487  egrep -i 'BOOT_IMAGE|out of memory' messages | cut -d' ' -f 6-8
+  488  egrep -i 'BOOT_IMAGE|out of memory' messages | cut -d' ' -f 1-3,6-8
+  489  cd templates/
+  490  ls
+  491  ls
+  492  mkdir tickets
+  493  mv inc37* tickets/
+  494  ls
+  495  cd tickets/
+  496  ls
+  497  mkdir 3777911
+  498  cd 3777911/
+  499  mv ../sosreport-fs16-dev2-3777911-2022-05-02-wjofosg.tar.xz .
+  500  ls
+  501  tar -xJvvf sosreport-fs16-dev2-3777911-2022-05-02-wjofosg.tar.xz
+  502  sudo -i
+  503  podman search nsrca-ospd-mon-registry.ssc.lmco.com:5000
+  504  clear
+  505  cd tickets/
+  506  ls
+  507  cd inc3777
+  508  cd inc3770765/
+  509  cd ..
+  510  ls
+  511  cd 3777911/
+  512  ls
+  513  tar -xJvvf sosreport-fs16-dev2-3777911-2022-05-03-ontrhja.tar.xz
+  514  cd sosreport-fs16-dev2-3777911-2022-05-03-ontrhja
+  515  ls
+  516  cd sos_commands/
+  517  ls
+  518  cd filesys/
+  519  ls
+  520  ls -l
+  521  cat mount_-l
+  522  cd ..
+  523  cd ../etc
+  524  less fstab
+  525  cat hosts
+  526  ls
+  527  cat fstab
+  528  cd
+  529  . stack
+  530  . stackrc
+  531  ls
+  532  subscription-manager release
+  533  sudo subscription-manager release
+  534  cat templates/rhsm.yaml
+  535  ansible -b -i inventory.sh -m shell -a 'subscription-manager release' all
+  536  subscription-manager repos --list
+  537  sudo subscription-manager repos --list
+  538  sudo subscription-manager repos --list-enabled
+  539  ansible -b -i inventory.sh -m shell -a ' subscription-manager repos --list-enabled | egrep "ansible|openstack-16"' Compute
+  540  ansible -b -i inventory.sh -m shell -a ' subscription-manager repos --list-enabled | egrep "ansible-2|openstack-16"' Controller
+  541  sudo subscription-manager module virt
+  542  sudo dnf module virt
+  543  sudo dnf module list virt
+  544  sudo dnf module list virt | grep '\[e\]'
+  545  ansible -b -i inventory.sh -m shells -a "dnf module list virt | grep '\[e\]' | grep virt" Controller
+  546  ansible -b -i inventory.sh -m shell -a "dnf module list virt | grep '\[e\]' | grep virt" Controller
+  547  ansible -b -i inventory.sh -m shell -a "dnf module list virt 2> /dev/null| grep '\[e\]' | grep virt" Controller
+  548  ssh heat-admin@vfd01-controller-0.ctlplane
+  549  ls
+  550  vim play-lock-16.1-repos.yaml
+  551  ansible-playbook -h
+  552  ansible-playbook -i inventory.sh -b play-lock-16.1-repos.yaml
+  553  ssh heat-admin@vfd01-controller-0.ctlplane
+  554  ls
+  555  find ./ -name 'container*yaml'
+  556  cd templates/
+  557  vim container-prepare.yaml
+  558  podman login nsrca-ospd-mon-registry.ssc.lmco.com:5000
+  559  podman search --help
+  560  podman search nsrca-ospd-mon-registry.ssc.lmco.com:5000 ceph
+  561  podman search nsrca-ospd-mon-registry.ssc.lmco.com:5000/ ceph
+  562  podman search nsrca-ospd-mon-registry.ssc.lmco.com:5000/
+  563  podman search http://nsrca-ospd-mon-registry.ssc.lmco.com:5000/
+  564  podman search http://nsrca-ospd-mon-registry.ssc.lmco.com:5000/ceph
+  565  w
+  566  podman search ceph
+  567  ls
+  568  cd /etc/containers/
+  569  ls
+  570  ls registries.
+  571  ls registries.d
+  572  vim registries.
+  573  vim registries.conf
+  574  sudo vim registries.conf
+  575  podman search ceph
+  576  podman search openstack
+  577  podman search
+  578  podman search *
+  579  podman search '*'
+  580  ls
+  581  sudo vim registries.conf
+  582  podman search keystone
+  583  sudo vim registries.conf
+  584  cd
+  585  ls
+  586  cd templates/
+  587  ls
+  588  vim container-prepare.yaml
+  589  cat container-prepare.yaml
+  590  podman search graphana
+  591  podman search prometheus
+  592  podman search rhceph
+  593  podman search *
+  594  podman search
+  595  podman search all
+  596  podman search osp
+  597  podman search
+  598  podman search openshift
+  599  vim container-prepare.yaml
+  600  grep -i fencing
+  601  grep -i fencing *
+  602  cd ..
+  603  ls
+  604  cd tickets/
+  605  ls
+  606  cd inc3777
+  607  cd inc3770765/
+  608  ls
+  609  ls -l
+  610  cd ..
+  611  ls
+  612  ls -l
+  613  cd inc3770765/
+  614  ls
+  615  cd sosreport-vfdc-156-82-64-16-2022-04-26-mqgqjev
+  616  ls
+  617  cd var/log
+  618  ls
+  619   less messages
+  620  cd sa/
+  621  ls
+  622  less sa01
+  623  les sar01
+  624  less sar01
+  625  less sar02
+  626  less sar01
+  627  less sar03
+  628  cd
+  629  ls
+  630  cd
+  631  ls
+  632  ssh heat-admin@vfd01-controller-0.ctlplane
+  633  cd
+  634  tmux
+  635  ./deploy.sh
+  636  exit
+  637  ls
+  638  bash -x deploy.sh
+  639  ls
+  640  ssh heat-admin@vfd01-controller-0.ctlplane
+  641  ssh heat-admin@vfd01-controller-1.ctlplane
+  642  ssh heat-admin@vfd01-controller-2.ctlplane
+  643  ssh heat-admin@vfd01-controller-1.ctlplane
+  644  exit
+  645  sudo -i
+  646  ssh heat-admin@vfd01-novacompute-0.ctlplane
+  647  yum info kernel
+  648  yum check-update
+  649  subscription-manager release
+  650  sudo -i
+  651  tmux list-session
+  652  tmux attach-session 0
+  653  tmux attach-session -t 0
+  654  tmux attach-session -t 5
+  655  tmux attach-session -t 7
+  656  sudo -i
+  657  sudo subscription-manager release --set=8.2
+  658  sudo yum update
+  659  sudo -i
+  660  ls
+  661  cat | base64 -d | gzip -dc > osp_debug.old
+  662  diff -u osp_debug.sh osp_debug.old
+  663  rm osp_debug.old
+  664  cd
+  665  ls
+  666  cd templates/
+  667  grep -i ntp *
+  668  podman search haproxy
+  669  vim /etc/containers/registries.conf
+  670  sudo vim /etc/containers/registries.conf
+  671  podman search haproxy
+  672  ls
+  673  cd templ
+  674  vim container-prepare.yaml
+  675  grep nsrca container-prepare.yaml /etc/containers/registries.conf
+  676  sudo vim /etc/containers/registries.conf
+  677  podman search haproxy
+  678  grep nsrca container-prepare.yaml /etc/containers/registries.conf
+  679  sudo vim /etc/containers/registries.conf
+  680  podman search haproxy
+  681  podman registry --help
+  682  podman pull nsrca-ospd-mon-registry.ssc.lmco.com:5000/swift-object:16.1
+  683  grep insecure /etc/containers/registries.conf
+  684  less /etc/containers/registries.conf
+  685  grep regis /etc/containers/registries.conf  | head
+  686  grep ^regis /etc/containers/registries.conf  | head
+  687  sudo /etc/containers/registries.conf
+  688  sudo vim /etc/containers/registries.conf
+  689  grep nsrca /etc/containers/registries.
+  690  grep nsrca /etc/containers/registries.conf
+  691  sudo vim /etc/containers/registries.conf
+  692  grep nsrca /etc/containers/registries.conf
+  693  sudo vim /etc/containers/registries.conf
+  694  grep nsrca /etc/containers/registries.conf
+  695  vim container-prepare.yaml
+  696  grep nsrca /etc/containers/registries.conf  ../undercloud.conf
+  697  grep nsrca /etc/containers/registries.conf
+  698  sudo vi /etc/containers/registries.conf
+  699  grep nsrca /etc/containers/registries.conf
+  700  vim container-prepare.yaml
+  701  vim ../undercloud.conf
+  702  sudo -i
+  703  ls
+  704  sudo -i
+  705  openstack undercloud upgrade
+  706  ls
+  707  cat deploy.sh
+  708  ls templates/
+  709  vim undercloud.conf
+  710  openstack undercloud upgrade
+  711  vim undercloud.conf
+  712  grep lmco /etc/containers/registries.conf
+  713  vim undercloud.conf
+  714  openstack undercloud upgrade
+  715  sudo reboot
+  716  tmux attach-session -t 7
+  717  w
+  718  ls
+  719  cd images/
+  720  ls
+  721  rm -f *
+  722  tar - xjf /usr/share/rhosp-director-images/overcloud-full-latest-16.1.tar
+  723  tar -xjf /usr/share/rhosp-director-images/overcloud-full-latest-16.1.tar
+  724  tar -xf /usr/share/rhosp-director-images/overcloud-full-latest-16.1.tar
+  725  tar -xf /usr/share/rhosp-director-images/ironic-python-agent-latest-16.1.tar
+  726  openstack overcloud image upload --update-existing --image-path /home/stack/images/
+  727  openstack overcloud node configure $(openstack baremetal node list -c UUID -f value)
+  728  ls -l /var/lib/ironic/httpboot/
+  729  cd
+  730  ls
+  731  cp deploy.sh  update.sh
+  732  vim update.sh
+  733  mv update.sh update-prepare.sh
+  734  tmux
+  735  cd /usr/share/
+  736  grep -r "OVN Container" *
+  737  vim openstack-tripleo-heat-templates/deployment/ovn/ovn-controller-container-puppet.yaml
+  738  cat ~/templates/parameters_extraconfigs.yaml
+  739  cd templates/
+  740  ls
+  741  vi parameters_extraconfigs.yaml
+  742  tmux list-session
+  743  tmux attach-session -t 0
+  744  cd /usr/share/openstack-tripleo-heat-templates/deployment
+  745  ls
+  746  cd container-image-prepare/
+  747  ls
+  748  vim container-image-prepare-baremetal-ansible.j2.yaml
+  749  ls
+  750  cd ..
+  751  ls
+  752  ls undercloud/
+  753  vim undercloud/undercloud-upgrade.yaml
+  754  ls podman/
+  755  cd
+  756   vim openstack-tripleo-heat-templates/deployment/ovn/ovn-controller-container-puppet.yaml
+  757  cd /usr/share/openstack-tripleo-heat-templates/
+  758   vim deployment/ovn/ovn-controller-container-puppet.yaml
+  759  ls /var/log
+  760   vim deployment/ovn/ovn-controller-container-puppet.yaml
+  761  cd
+  762  ssh heat-admin@vfd01-novacompute-0.ctlplane
+  763  ssh heat-admin@vfd01-controller-0.ctlplane
+  764  ssh heat-admin@vfd01-controller-1.ctlplane
+  765  ssh heat-admin@vfd01-controller-2.ctlplane
+  766  ls templates/
+  767  cat vfd01rc
+  768  . vfd01rc
+  769  for i in `openstack server list --all-projects -c ID -f value`;     do temp=$(openstack sever show $i -c OS-EXT-STS:power_state -f value);         if $temp == "paused":;             openstack server unpause $i
+  770  for i in `openstack server list --all-projects -c ID -f value`;     do temp=$(openstack sever show $i -c OS-EXT-STS:power_state -f value);         if $temp == "paused":;             openstack server unpause $i;done
+  771  clear
+  772  ls
+  773  cat > /tmp/conv-host.log
+  774  vim /tmp/conv-host.log
+  775  egrep 'PLAY|rc|msg' /tmp/conv-host.log | less
+  776  egrep 'PLAY|\"rc|\"msg' /tmp/conv-host.log | less
+  777  vim /tmp/conv-host.log
+  778  egrep 'TASK|PLAY|\"rc|\"msg' /tmp/conv-host.log | less
+  779  vim /tmp/conv-host.log
+  780  egrep 'TASK|PLAY|\"rc|\"msg' /tmp/conv-host.log | less
+  781  vim /tmp/conv-host.log
+  782  . vfd01rc
+  783  cat vfd01rc
+  784  clear
+  785  openstack --os-username=admin --os-user-name=default --os-password="HlCRv0wenpd0N7NmfX7S8NjtC" token issue
+  786  openstack token
+  787  openstack token issue --os-username=admin --os-user-name=default --os-password="HlCRv0wenpd0N7NmfX7S8NjtC"
+  788  clear
+  789  cat vfd01rc
+  790  openstack token issue --os-auth-url=https://iaas-east-dev.ssc.lmco.com:13000 --os-username=admin --os-user-name=default --os-password="HlCRv0wenpd0N7NmfX7S8NjtC"
+  791  openstack token issue --os-auth-url=iaas-east-dev.ssc.lmco.com:13000 --os-username=admin --os-user-name=default --os-password="HlCRv0wenpd0N7NmfX7S8NjtC"
+  792  openstack token issue --os-auth-url=http://iaas-east-dev.ssc.lmco.com:13000 --os-username=admin --os-user-name=default --os-password="HlCRv0wenpd0N7NmfX7S8NjtC"
+  793  cat vfd01rc
+  794  openstack token issue --os-auth-url=http://iaas-east-dev.ssc.lmco.com:13000 --os-username=admin --os-user-name=Default --os-password="HlCRv0wenpd0N7NmfX7S8NjtC"
+  795  openstack token issue --os-auth-url=https://iaas-east-dev.ssc.lmco.com:13000 --os-username=admin --os-user-name=Default --os-password="HlCRv0wenpd0N7NmfX7S8NjtC"
+  796  openstack token issue --os-auth-url https://iaas-east-dev.ssc.lmco.com:13000 --os-username admin --os-user-name Default --os-password "HlCRv0wenpd0N7NmfX7S8NjtC"
+  797  openstack token issue --os-auth-url http://iaas-east-dev.ssc.lmco.com:13000 --os-username admin --os-user-name Default --os-password "HlCRv0wenpd0N7NmfX7S8NjtC"
+  798  openstack token issue --os-auth-url https://iaas-east-dev.ssc.lmco.com:13000 --os-username admin --os-user-name Default --os-password "HlCRv0wenpd0N7NmfX7S8NjtC"
+  799  clear
+  800  ls
+  801  ssh heat-admin@vfd01-controller-2.ctlplane
+  802  cd templates/
+  803  ls
+  804  vim cinder-netapp-config.yaml
+  805  cd temp
+  806  cd ../templates/
+  807  ls
+  808  vim cinder-netapp-config.yaml
+  809  ssh heat-admin@vfd01-novacompute-0.ctlplane
+  810  cat templates/cinder-netapp-config.yaml
+  811  cd templates/
+  812  grep inistar *.yaml
+  813  cd
+  814  . vfd01rc
+  815  openstack image list
+  816  cd /tmp
+  817  cat > nfs.txt
+  818  vim nfs.txt
+  819  history | grep up
+  820  history | grep overcloud
+  821  cd
+  822  ls
+  823  exit
+  824  . vfd01rc
+  825  openstack stack list
+  826  . st
+  827  . stack
+  828  . stackrc
+  829  openstack stack list
+  830  history |grep up
+  831  tmux
+  832  clear
+  833  ls
+  834  cat templates/rhsm.yaml
+  835  nslookup vfd01-novacompute-0.us.lmco.com
+  836  nslookup vfd01-novacompute-0.ssc.lmco.com
+  837  openstack server list
+  838  ssh heat-admin@vfd01-novacompute-0.ctlplane
+  839  . vfd01rc
+  840  openstack server list --all-projects
+  841  ssh -i ~/.ssh/id_rsa cloud-user@156.82.66.55
+  842  ssh -i ~/.ssh/id_rsa cloud-user@156.82.66.186
+  843  ip link show
+  844  ping 156.82.66.154
+  845  ping 156.82.66.55
+  846  ping 156.82.66.75
+  847  ssh cloud-user@156.82.66.75
+  848  ssh @156.82.66.75
+  849  openstack server list
+  850  openstack server show --max-width 140 test-instance
+  851  ls
+  852  ls ~/.ssh
+  853  ls ~/.ssh/backup/
+  854  ssh-keygen -L -f ~/.ssh/guest_admin.pub -E md5
+  855  ssh-keygen -l -f ~/.ssh/guest_admin.pub -E md5
+  856  openstack keypair list
+  857  ls
+  858  ls temp/
+  859  find ./ -name '*test*'
+  860  ls
+  861  ls log
+  862  ls logs
+  863  ls images
+  864  ls deployment
+  865  ls vmimages/
+  866  openstack flavor list
+  867  openstack server create --key-name stack_admin --flavor test --image 29abcd7d-2757-490b-a599-aee858d549bf --nic net-id=provider-2430 --security-group default --wait subs-test
+  868  openstack security group show
+  869  openstack security group list
+  870  openstack project list
+  871  openstack server create --key-name stack_admin --flavor test --image 29abcd7d-2757-490b-a599-aee858d549bf --nic net-id=provider-2430 --security-group 9fd0f8d0-feca-4f2f-bfe7-352293e85db9 --wait subs-test
+  872  ssh -i ~/.ssh/id_rsa cloud-user@156.82.66.45
+  873  ssh heat-admin@vfd01-novacompute-0.ctlplane
+  874  ssh -i ~/.ssh/id_rsa cloud-user@156.82.66.45
+  875  ssh heat-admin@vfd01-novacompute-0.ctlplane
+  876  ssh -i ~/.ssh/id_rsa cloud-user@156.82.66.45
+  877  ssh heat-admin@vfd01-novacompute-0.ctlplane
+  878  clear
+  879  cat templates/rhsm.yaml
+  880  ls templates/
+  881  cat/ templates/
+  882  cat/ templates//
+  883  cat/ templates/parameters_extraconfigs.yaml
+  884  cat templates/parameters_extraconfigs.yaml
+  885  tmux ls
+  886  tmux -a 0
+  887  tmux --attach 0
+  888  tmux --attach session 0
+  889  tmux attach session 0
+  890  tmux attach
+  891  ls
+  892  cd templates/
+  893  ls
+  894  vim parameters_extraconfigs.yaml
+  895  ping savant-dev.ssc.lmco.com
+  896  cat /etc/resolv.conf
+  897  nslookup
+  898  ping  savant-dev.ssc.lmco.com
+  899  nslookup  savant-dev.ssc.lmco.com
+  900  ping  savant-dev.ssc.lmco.com
+  901  nslookup  savant-dev.ssc.lmco.com
+  902  ping  savant-dev.ssc.lmco.com
+  903  ping 158.188.68.11
+  904  ping  savant-dev.ssc.lmco.com
+  905  ping  -4 savant-dev.ssc.lmco.com
+  906  ping  -6 savant-dev.ssc.lmco.com
+  907  strace -f -s 512 -o /tmp/ping-savant.trace ping savant-dev.ssc.lmco.com
+  908  sudo dnf install strace -y
+  909  strace -f -s 512 -o /tmp/ping-savant.trace ping savant-dev.ssc.lmco.com
+  910  sudo strace -f -s 512 -o /tmp/ping-savant.trace ping savant-dev.ssc.lmco.com
+  911  less /tmp/ping-savant.trace
+  912  ping  -4 savant-dev.ssc.lmco.com
+  913  nslookup savant-dev.ssc.lmco.com
+  914  ping *.apps.nsrca-ospd.ssc.lmco.com
+  915  sudo -i
+  916  w
+  917  top
+  918  df
+  919  w
+  920  . vfd01rc
+  921  openstack server list
+  922  openstack volume snapshot list
+  923  openstack server | grep server
+  924  openstack security group list
+  925  openstack project list | grep adminls
+  926  openstack network list | grep provider
+  927  openstack image list
+  928  openstack keypair list
+  929  openstack server create --image b6b06638-7d5e-4197-a1a2-5c3f04c80f18 --key-name stack_admin --nic net-id=provider-2430 --boot-from-volume 20 --security-group 9fd0f8d0-feca-4f2f-bfe7-352293e85db9 --flavor m1.small snap-back-volume
+  930  openstack flavor list
+  931  openstack server create --image b6b06638-7d5e-4197-a1a2-5c3f04c80f18 --key-name stack_admin --nic net-id=provider-2430 --boot-from-volume 20 --security-group 9fd0f8d0-feca-4f2f-bfe7-352293e85db9 --flavor test snap-back-volume
+  932  openstack server create --image b6b06638-7d5e-4197-a1a2-5c3f04c80f18 --key-name stack_admin --nic net-id=provider-2430 --security-group 9fd0f8d0-feca-4f2f-bfe7-352293e85db9 --flavor test snap-back-ephemeral
+  933  openstack server list
+  934  openstack server | grep server
+  935  openstack server restore
+  936  ls
+  937  openstack server list
+  938  openstack server image create
+  939  openstack server image create --name snephemeral-image snap-back-ephemeral
+  940  openstack image list
+  941  openstack image show --max-width 140 0ff17424-6cfb-467a-9e63-2068773754dd
+  942  openstack server image create --name snvolume-image snap-back-volume
+  943  openstack image show --max-width 140 71d23888-f7bc-4128-95a3-835c079b1c00
+  944  openstack server backup
+  945  openstack server backup create
+  946  openstack server backup create --name snephemeral-back snap-back-ephemeral
+  947  openstack server backup create --name snvolume-back snap-back-volume
+  948  openstack image show --max-width 140 71d23888-f7bc-4128-95a3-835c079b1c00
+  949  openstack volume list
+  950  openstack volume backup create
+  951  openstack volume backup create --name snvolume-back b1e3da04-e262-4cb1-b7a2-3c81bbaed9ea
+  952  openstack volume backup create --name snvolume-back b1e3da04-e262-4cb1-b7a2-3c81bbaed9ea --force
+  953  openstack catalog show object-store
+  954  openstack server list
+  955  ssh heat-admin@10.224.2.42
+  956  clear
+  957  cat templates/parameters_extraconfigs.yaml
+  958  q
+  959  cd templates/
+  960  ls
+  961  clear
+  962  ls ~/.ssh
+  963  cat ~/.ssh/guest_admin.pub
+  964  ls
+  965  mkdir java
+  966  cd java/
+  967  ls
+  968  ls -l
+  969  scp -i ~/.ssh/guest_admin java*rpm cloud-user@156.82.65.193:
+  970  cd
+  971  . vfd01rc
+  972  openstack server list
+  973  openstack server show --max-width 140  1076c82f-ddcc-4d2c-b84e-92418daa4b75
+  974  openstack server show --max-width 140  7f35783d-ccc3-4605-ab29-8fdf88699485
+  975  ssh vfd01-novacompute-0.ctlplane
+  976  ssh heat-admin@vfd01-novacompute-0.ctlplane
+  977  ansible -b -i inventory.sh -m setup Compute
+  978  ansible -b -i inventory.sh -m setup Compute > /tmp/compute-setup
+  979  vim /tmp/compute-setup.out
+  980  ssh heat-admin@vfd01-novacompute-0.ctlplane
+  981  ls
+  982  vim play-virt-who.yaml
+  983  ansible-playbook -i inventory.sh play-virt-who.yaml
+  984  ssh heat-admin@vfd01-novacompute-0.ctlplane
+  985  vi play-virt-who.yaml
+  986  ansible-playbook -i inventory.sh play-virt-who.yaml
+  987  ssh heat-admin@vfd01-novacompute-0.ctlplane
+  988  ansible-playbook -i inventory.sh play-virt-who.yaml
+  989  ssh heat-admin@vfd01-novacompute-0.ctlplane
+  990  vi play-virt-who.yaml
+  991  ansible-playbook -i inventory.sh play-virt-who.yaml
+  992  vi play-virt-who.yaml
+  993  ansible-playbook -i inventory.sh play-virt-who.yaml
+  994  ssh heat-admin@vfd01-novacompute-0.ctlplane
+  995  s
+  996  ls
+  997  cat play-virt-who.yaml
+  998  cat play-virt-who.yaml  | base64
+  999  vi play-virt-who.yaml
+ 1000  cat play-virt-who.yaml  | base64
+
+
+ openstack user list | grep sscclvfdcmep
+| 747e1c0c92f6452fb0cc3f8c062b9bc7                                 | sscclvfdcmep            |
+(vf01) [stack@nsrea-ospp-director openstack]$ openstack user list | grep sscldcfmep
+| 374211d656154a47bd1c776df5d2cb8e                                 | sscldcfmep              
+password for sscldcfmep
+ssccldfmep
+
+
+ openstack server create --image 3a628070-eefc-4e38-ab13-e40a55f69840 --security-group 14d97226-f852-4147-9dc6-6de70142578e --nic net-id=provider-2430 --boot-from-volume 10 --flavor m1.large --key-name stack_heat_admin forwarder-test
+
+cp /home/stack/splunkforwarder-8.2.5-77015bc7a462-linux-2.6-x86_64.rpm .
+
+
+grep -ri quota_storage
+
+ansible -b -i ~/inventory-ddc01.sh -m shell -a 'grep -ir jareiche /var/log/containers/' Controller
+
+
+
+grep -ri JeffRNTPS
+roles/ospmapping/vars/main.yaml:  - project: "JeffRNTPS"
+
+(undercloud) [stack@nsrca-ospd-director2 ~]$ openstack baremetal node list
+
+
+openstack_auth.forms Login failed for user "jareiche" using domain "DDC", remote address 147.170.31.93.
+ddc01-controller-1 | CHANGED | rc=0 >>
+
+ansible -b -i ~/inventory-ddc01.sh -m shell -a 'grep -ir jareiche /var/log/containers/' Controller
+
+grep -ri JeffRNTPS
+roles/ospmapping/vars/main.yaml:  - project: "JeffRNTPS"
+
+ddc_mapping_details:
+  - project: "ShamDemo"
+  - project: "SilveroRobert003"
+  - project: "JeffRNTPS"
+
+ddc01-novacompute-5.ssc.lmco.com
+JeffrNTPSInstance
+ID
+dcd6e5fb-34f2-4e4d-8086-8b6ef4848d2f
+Description
+Learning instance
+Project ID
+9ab28f61c8884585a8af659fbeee84e
+
+
+[stack@nsrcc-ospp-dir openstack]$ cd cloudcatalog
+[stack@nsrcc-ospp-dir openstack]$ git pull 
+[stack@nsrcc-ospp-dir openstack]$ cp ospmapping/vars/main.yaml osponlymapping/vars/main.yaml
+[stack@nsrcc-ospp-dir openstack]$ ansible-playbook only_mapping.yaml -e dialog_param_os_env=DDC --ask-vault-pass
+[stack@nsrcc-ospp-dir openstack]$ openstack mapping show lmsso | grep -i ddc.JeffRNTPS
+
+
+ssh heat-admin@vfd01-novacompute-0.ctlplane
+ssh heat-admin@vfd01-controller-0.ctlplane
+ssh heat-admin@ddc01-controller-0.ctlplane
+
+
+for file in ls *.xz; do tar -xJf $file; done
+
+ssh rescueme@158.188.82.208
+ssh cloud-user@158.188.82.208
+
+
+
+for PROJECT in `openstack project list -c=Name -f=value` ; do echo "$PROJECT" >> server.csv ; openstack server list -c=Name -c=Networks -c=Flavor --status=Active --project $PROJECT --all -f=csv >> server.csv ; done
+
+
+
+
+INC3906164	
+VFD
+Region:  iaas-east
+Project Name:  mbedevcDDC
+a320ccb28efb443e996840340df4d22d | mbedevcDDC
+
+
+INC3906174
+DDC
+Region:  iaas-west
+Project Names:  mbeadevbDDC and spinnerDDC
+9f6e174045a34ac39a8dc1958719fe9b | mbeadevbDDC      
+586a143af1c340eabc431d61bde66aa1 | spinnerDDC 
+
+156.82.66.62
+
+
+ssh -i dl_test_rsa cloud-user@156.82.70.60
+
+
+ to update the cert, will need to just copy it into the inject-trust-anchor.yaml  
+ and run ocd04-deploy.sh
+openssl pkcs12 -in PFX -out PEM -nodes
+
+
+
+
+from director
+ ssh -i ~/.ssh/id_rsa_ssc_cmn root@ocd04s001
+
+
+
+
+ceph health detail | grep "full"
+
+make sure the wwids  all match
+2:43
+there was a typo in the /etc/multipath/wwids
+white_check_mark
+eyes
+raised_hands::skin-tone-4
+
+
+
+
+
+2:45
+then reboot, add to blacklist, i took the devices out of the /etc/lvm/devices/system.devices
+2:45
+rebooted
+2:45
+then re added them, reboot
+2:45
+then did the initrd
+
+
+
+
+156.82.66.42, but not 156.82.67.175
+
+ 156.82.65.27
+5:31
+156.82.65.194 has ALLOW IPv4 icmp from arches_default_sg
+
+
+
+VFDC VM (192.168.10.91,  156.82.69.96 
+3cd35e87-bb7d-4f94-a73f-4511b5cb4f85 | cf-opn-vfdc-cf-02-rke2a13 
+Project : CloudFactory	
+Host: vf01-novacompute-14.ssc.lmco.com
+
+
+
+two other VMs (192.168.10.200, 156.82.66.146 and 192.168.10.24, 156.82.69.6),
+
+
+
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAFnosN4pSEyFphInUoVFXVgIS84yZKTQ2KwsT7iyjzzp3tLrZPfJlMZLzBLzdbCjUjwf/gAQHA90DCWUMXbBh4= root@cf-opn-vfdc-cf-02-rke2s13
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHBYcaItk4nSg+oE25eB+QkTRJJqLFt/52IVR4E1FQ8F root@cf-opn-vfdc-cf-02-rke2s13
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCxCBgM0gqz9kQRg2rppLLA7EZFWFzFaV/RvK9n8JiaWwNkuHDr/EWNeOQEbP8dwupXgma6BgZfgWHlwEGQqJYd3ZNlvyTPQ+RBcaLk4k+xuDHR/GpSFcY/Hzva8H9WSFvdRBUJz4g1suC2fOhzTLaNabcENjcN8Bfw57guzar0SfJhI20X0y/HwHZRY8m26+lPs1bTNZLfLLJUVnyhx9+FJldLE482Mh+Z35qwFZVOSAsnRGhdgJPi8A+TLnpN/FmaweeeroYFy8Ud4hhG+1lf2be5Q3ixySZ9bv8fzbnb6ABvWeE2TRCiekuXq/XHClMmMJrBZWefDlXQVHyc0UCm0ogwj6Kr1yqgi9p9FgojltfIOAHR72CuDF49sMeLAAZKHYZTeBwI1212UZSXI1b9AKgvlj3O1sQUzmjR4Se4o0oOhcfJv8v/ndc1Bos1S3344Q1D41nkZpKTFvKtRmeXLT/+eLP4aCur6faZD6oJ8SJLMusVHUcjoCCE1LUIQtU= root@cf-opn-vfdc-cf-02-rke2s13
+
+
+----
+-----BEGIN SSH HOST KEY KEYS-----
+ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBE8f9ytDBniDIhkwl5pm7ZdVK0ee8XO0gtAxSkkMZL0e33DdInchHRgTISpgyEfzya44Smam3s8hn8iAfGjWYNU= root@cf-opn-vfdc-cf-02-rke2a12
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOTrXJ99jYF+z2vETNHr2c+ynx1k8jr3+tw//sSkCQOu root@cf-opn-vfdc-cf-02-rke2a12
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCovWbWnFUEY8pM+7YSqnF8g/cOf4rvzu/U6Xly5I0zGPj3mK+zkPw8hwXZbC5ZAWrCEehs9r/Ob1aP0KQ9oOOM/azM+EhbifwSVbn9Xy40D7WZ45OjQF2lmUSt5jcQG5wLkJmlZYuiVZWnV7z0cAZqXQgFA3oCBJj4GtjoKlAifUXvocvhOEGClBCOlMsFOk0rIQez07SqnRVzN6VrCIRzd/Uze+jjGbkHffRYCp7qIpuIXxt9Qbm18PSNBwlKrl49ng5FZmzHIG65gm6GW7glrFUMHwmYuT+OCqV0Q/4aMykKlw1wFwVd3FnMTjgDWBrP42UcD0jvdS+Be++P0atN3XvsznOoOb7PZEwkjxwdiGniDAzyVLnb0B0rq9mQpWNU28NAiixtSJ3qdL5hGP7fG5EWQpMZyc6D6tAE3ryKxMJbQcPL3972kq+Gxa2T0DUpQ/gywoHiuWx2YQvJ2iC+MxM4rc5w+6j0o+0wG4uDc6NPdqfSzOt7RJjlFKEYg/M= root@cf-opn-vfdc-cf-02-rke2a12
+-----END SSH HOST KEY KEYS----
+
+
+openstack server list --all-projects  |grep 156.82.64.194
+99904d81-bd35-44f0-92c9-e1308ed99b6f
+
+https://nsrca-prd-engine.ssc.lmco.com/ovirt-engine/sso/login.html
+admin/0sprey:1
+
+-------
+(vf01) [stack@nsrea-ospp-director ~]$ openstack project show 8c111cc195534b9bb75fcb98ae363a53
++-------------+----------------------------------+
+| Field       | Value                            |
++-------------+----------------------------------+
+| description | calibration data analysis        |
+| domain_id   | ca7271b03c964bbcbad5cac648506a7c |
+| enabled     | True                             |
+| id          | 8c111cc195534b9bb75fcb98ae363a53 |
+| is_domain   | False                            |
+| name        | calDatAnalysis                   |
+| options     | {}                               |
+| parent_id   | ca7271b03c964bbcbad5cac648506a7c |
+| tags        | []                               |
++-------------+----------------------------------+
+
+
+$ openstack server show 79043565-42c5-41ab-b822-59b9d2c31cc5
++-------------------------------------+-----------------------------------------------------------------------------------------------+
+| Field                               | Value                                                                                         |
++-------------------------------------+-----------------------------------------------------------------------------------------------+
+| OS-DCF:diskConfig                   | AUTO                                                                                          |
+| OS-EXT-AZ:availability_zone         | nova                                                                                          |
+| OS-EXT-SRV-ATTR:host                | vf01-novacompute-12.ssc.lmco.com                                                              |
+| OS-EXT-SRV-ATTR:hostname            | calanalysis                                                                                   |
+| OS-EXT-SRV-ATTR:hypervisor_hostname | vf01-novacompute-12.ssc.lmco.com                                                              |
+| OS-EXT-SRV-ATTR:instance_name       | instance-00000374                    
+
+
+
+Key Name
+calInstanceKey
+Image
+None
+Volumes Attached
+Attached To
+a962a2b0-6cf0-4aaa-8887-9bea7e29fc8f on /dev/vda
+Attached To
+data on /dev/vdb
+Attached To
+dataLarge on /dev/vdc
+
+rescue123
+Project
+calDatAnalysis	calibration data analysis	8c111cc195534b9bb75fcb98ae363a53	lmco
+
+Flavor
+caldata.large	32	252GB	80GB	0GB	0MB	1.0	c841718c-261a-486e-83bd-7433987897e2
+
+
+
+openstack server create --flavor caldata.large --image a1db6c30-e97c-4c8d-b9d2-348224f7c99a --availability-zone nova --network provider-2430 --security-group default --key-name calInstanceKey  calAnalysis2
+
+
+openstack project set --domain ca7271b03c964bbcbad5cac648506a7c 8c111cc195534b9bb75fcb98ae363a53
+
+
+vf01-novacompute-12.ssc.lmco.com
+
+
+openstack role add -user admin --project-domain lmco --project project_name admin
+
+openstack role add -user admin --project-domain lmco --project calDatAnalysis admin
+
+openstack server create --flavor caldata.large --image a1db6c30-e97c-4c8d-b9d2-348224f7c99a --availability-zone nova --network provider-2430 --security-group default --key-name calInstanceKey  calAnalysis2
+
+
+/dev/vdc1 /data ext4 defaults 0 3
+/dev/vdd1 /dataLarge ext4 defaults 0 3
+
+ssh cloud-user@156.82.67.160
+
+
+ldapsearch -x -D ssclcldadop@us.lmco.com -W -H ldaps://usadc-gtm.us.lmco.com:3269
+Enter LDAP Password:
+ldap_bind: Invalid credentials (49)
+        additional info: 80090308: LdapErr: DSID-0C090447, comment: AcceptSecurityContext error, data 52e, v3839
+		
+		
+		
+openstack group list |grep NGG-OPIR-ATLO-Digisim-MPSS-Openstack
+| cea2f579ff0543d0a03fb11557a1a153 | ssc.osp.ddc.NGG-OPIR-ATLO-Digisim-MPSS-Openstack |
+
+----
+f 
+
+
+f7fbb2ee-ca00-4153-b6f9-382e2ba5d652(192.168.10.200, 156.82.64.68) 
+to 
+aa260101-7eb9-4ce4-86d1-416697f81f5a (192.168.10.147, 156.82.67.62) 
+
+
+openstack server list --column ID --all-projects --project 8c9b5e5cacd0499d93efbbcdb041e4be
+
+
+Project SpaceTWC
+5ece73fcc08542c7bea9b6fd100953e2 
+Instance ID 58bafd14-c2e8-4e0c-865d-064f3136f91f 
+
+
+https://docs.us.lmco.com/pages/viewpage.action?spaceKey=I2D2&title=Valley+Forge+OSP+Information
+
+rhadmin		RHP@ssw0rd123!
+
+nsrea-ospd-director	MXQ0500T29	ProLiant DL360 Gen10	
+See info below	ILO:nsrea-ospd-director-mgmt.us.lmco.com	156.82.81.162
+8.4
+r3dh4t1!
+create admind acct "stack" 
+
+r3dh4t1!
+r3dh4t1!
+
+rhservice	SVCP@ssw0rd678!
+
+bastion
+http://158.188.69.201/rhel-8.4-x86_64-dvd.iso
+admin/r3dh4t1!
+
+http://158.188.69.201/rhel-8.4-x86_64-dvd-copy.iso
+
+DHCPv4 Status
+Disabled
+Address
+156.82.81.162
+Subnet Mask
+255.255.255.128
+Default Gateway
+156.82.81.254
+
+
+nmcli connection modify Example-Connection ipv4.addresses 156.82.81.162/25
+
+
+nmcli conn add type bond con-name bond0 ifname bond0 bond.options miimon=1,updelay=0,downdelay=0,mode=802.3ad ipv4.method disabled ipv6.method ignore
+nmcli conn add type ethernet con-name slave1 ifname eno6 master bond0 slave-type bond
+nmcli conn add type ethernet con-name slave2 ifname ens1f1 master bond0 slave-type bond
+nmcli conn add type vlan con-name bond0.1020 dev bond0 id 1020 ip4 158.188.1.10/25 gw4 158.188.1.126 ipv4.dns "192.132.207.1 192.132.207.2"
+nmcli conn up bond0
+nmcli conn up bond0.2420
+
+
+
+
+http://158.188.69.201/net-com 
+
+
+sudo subscription-manager attach --pool=Valid-Pool-Number-123456
+
+
+[stack@localhost /]$ sudo subscription-manager repos --disable=*
+Repository 'rhel-8-for-x86_64-appstream-rpms' is disabled for this system.
+Repository 'satellite-tools-6.10-for-rhel-8-x86_64-rpms' is disabled for this system.
+Repository 'rhel-8-for-x86_64-highavailability-eus-rpms' is disabled for this system.
+Repository 'rhel-8-for-x86_64-baseos-rpms' is disabled for this system.
+Repository 'advanced-virt-for-rhel-8-x86_64-rpms' is disabled for this system.
+Repository 'rhel-8-for-x86_64-baseos-eus-rpms' is disabled for this system.
+Repository 'openstack-16.1-for-rhel-8-x86_64-rpms' is disabled for this system.
+Repository 'openstack-16.2-for-rhel-8-x86_64-rpms' is disabled for this system.
+Repository 'ansible-2.9-for-rhel-8-x86_64-rpms' is disabled for this system.
+Repository 'rhel-8-for-x86_64-appstream-eus-rpms' is disabled for this system.
+Repository 'rhel-8-for-x86_64-highavailability-rpms' is disabled for this system.
+Repository 'codeready-builder-for-rhel-8-x86_64-rpms' is disabled for this system.
+
+
+
+subscription mangement  with content view repair and activation key for content view 
+
+
+2023-01-10 18:11:08.218452 | 48df37b6-16c0-f3db-29a2-0000000011f5 |       TASK | Failed deployment if facter fails
+2023-01-10 18:11:08.271934 | 48df37b6-16c0-f3db-29a2-0000000011f5 |    SKIPPED | Failed deployment if facter fails | nsrea-ospd-director
+2023-01-10 18:11:08.272268 | 48df37b6-16c0-f3db-29a2-0000000011f5 |     TIMING | Failed deployment if facter fails | nsrea-ospd-director | 0:23:36.756163 | 0.05s
+
+
+
+ilo password
+rhadmin		
+RHP@ssw0rd123!
+
+
+rhservice	
+SVCP@ssw0rd678!
+
+
+https://156.82.81.163
+94:40:c9:44:11:d8
+
+https://156.82.81.164/
+94:40:c9:3f:ef:f0
+
+
+https://156.82.81.165
+94:40:c9:3f:cf:a4
+
+https://156.82.81.166
+94:40:c9:43:00:a0
+
+https://156.82.81.167
+94:40:c9:44:71:e4
+
+
+
+
+find . -type d -exec ls -ld {} \;
+find .git ! -user stack -exec ls -l {} \;
+diff -ur group_vars group_vars.temp/
+
+
+RHV
+root/atbird
+
+
+push cert
+ansible -b -i ~/inventory.sh  -m shell -a 'cat /tmp/netapp2.cert >> /etc/pki/tls/certs/ca-bundle.crt' Controller
+
+cat | base64 -d > /tmp/netapp.cert
+
+openssl x509 -text -noout -in /tmp/netapp2.cert
+
+
+ansible -b -i inventory.sh -m lineinfile -a 'path=/etc/hosts line="10.224.32.201      dullea" backup=yes' Controller
+
+
+gitrunner1 old instance 
+4246b0e4-7e6b-47ca-9022-924a0e7a6105
+volume attached bafb5e7f-466f-4a91-a3b5-2367fd4d5419
+
+rhel 8 or rhel 7
+subscription-manager register --org="SSC_INISTAR_INFRA" --activationkey="rhel8" --force
+subscription-manager register --org="SSC_INISTAR_INFRA" --activationkey="rhel7" --force
+subscription-manager repos --list-enabled
+
+mount -o remount,rw /
+
+158.188.81.92 
+Project: IndexerDev
+[root@dpa4 ~]# dnf repolist
+Updating Subscription Management repositories.
+Invalid configuration value: failovermethod=priority in /etc/yum.repos.d/efoss-yum-postgresql-proxy.repo; Configuration: OptionBinding with id "failovermethod" does not exist
+
+efoss-yum-postgresql-proxy                      Lockheed Martin Enterprise FOSS Proxy yum-postgresql-proxy
+
+
+
+
+openstack server list --all-projects --project
+ssh -i joel-east-key cloud-user@156.82.64.83
+
+yum -y update --exclude=iptables,sssd-common
+
